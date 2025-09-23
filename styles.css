@@ -1142,3 +1142,69 @@ html {
         height: 150px;
     }
 }
+
+/* Centered Contact Content */
+.contact-content-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.contact-info-centered {
+    max-width: 700px;
+    text-align: center;
+}
+
+.contact-info-centered h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--light-cream);
+    text-align: center;
+}
+
+.contact-info-centered p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+.contact-details {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.contact-details .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--light-cream);
+    justify-content: center;
+}
+
+.contact-details .contact-item i {
+    color: var(--sage-green);
+    font-size: 1.2rem;
+    width: 20px;
+}
+
+.contact-details .contact-item a {
+    color: var(--sage-green);
+    text-decoration: none;
+}
+
+.contact-details .contact-item a:hover {
+    text-decoration: underline;
+}
+
+.resume-download {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
