@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -32,7 +31,6 @@
             <div class="container case-hero-grid">
                 <div>
                     <a class="back-link" href="index.html#work">
-                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                         Back to work
                     </a>
                     <p class="eyebrow">Flagship product build</p>
@@ -45,7 +43,17 @@
                         <a class="button secondary" href="https://github.com/Chandrakanth-Gubbala/risq-weather-intelligence" target="_blank" rel="noopener">GitHub repo</a>
                     </div>
                 </div>
-                <img class="case-preview" src="assets/images/risq-preview.png" alt="RisQ Weather Intelligence preview">
+                <aside class="case-proof-panel" aria-label="RisQ system summary">
+                    <span>RisQ system map</span>
+                    <strong>Weather APIs -> risk layers -> alert context -> SkyScout response</strong>
+                    <p>Built to show forecast evidence, name missing data, and keep OpenAI usage server-side.</p>
+                    <div class="proof-line">
+                        <em>NOAA/NWS</em>
+                        <em>Open-Meteo</em>
+                        <em>Leaflet</em>
+                        <em>TypeScript</em>
+                    </div>
+                </aside>
             </div>
         </section>
 

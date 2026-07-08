@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -32,7 +31,6 @@
             <div class="container case-hero-grid">
                 <div>
                     <a class="back-link" href="index.html#work">
-                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                         Back to work
                     </a>
                     <p class="eyebrow">AI workflow design</p>
@@ -41,7 +39,17 @@
                         A source-grounded assistant concept designed around retrieval, validation, refusal logic, and escalation so users get useful answers without false confidence.
                     </p>
                 </div>
-                <img class="case-preview" src="assets/images/nora-preview.png" alt="Nora AI assistant preview">
+                <aside class="case-proof-panel" aria-label="Nora assistant summary">
+                    <span>Trust architecture</span>
+                    <strong>Retrieve -> validate -> answer, clarify, refuse, or escalate</strong>
+                    <p>Designed around evidence and boundaries so the assistant stays useful without creating false confidence.</p>
+                    <div class="proof-line">
+                        <em>RAG</em>
+                        <em>Validation</em>
+                        <em>Refusal paths</em>
+                        <em>Human review</em>
+                    </div>
+                </aside>
             </div>
         </section>
 

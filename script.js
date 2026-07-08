@@ -11,8 +11,7 @@ if (navToggle && navLinks) {
     });
 
     navLinks.addEventListener("click", (event) => {
-        const target = event.target;
-        if (target instanceof HTMLAnchorElement) {
+        if (event.target instanceof HTMLAnchorElement) {
             navLinks.classList.remove("open");
             navToggle.setAttribute("aria-expanded", "false");
         }
@@ -31,6 +30,21 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
         const headerHeight = header ? header.getBoundingClientRect().height : 0;
         const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
         window.scrollTo({ top, behavior: "smooth" });
+    });
+});
+
+const categoryButtons = document.querySelectorAll(".category-btn");
+const projectCards = document.querySelectorAll(".project-card[data-category]");
+
+categoryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const category = button.dataset.category || "all";
+
+        categoryButtons.forEach((item) => item.classList.toggle("active", item === button));
+        projectCards.forEach((card) => {
+            const shouldShow = category === "all" || card.dataset.category === category;
+            card.hidden = !shouldShow;
+        });
     });
 });
 
@@ -63,7 +77,7 @@ if (sections.length) {
 }
 
 const revealTargets = document.querySelectorAll(
-    ".section-heading, .featured-project, .project-card, .evidence-grid article, .timeline-item, .skills-grid article, .metric-grid article, .case-content article"
+    ".section-heading, .about-copy, .timeline-item, .project-card, .skill-category, .interest-card, .contact-card, .metric-grid article, .case-content article"
 );
 
 revealTargets.forEach((target) => target.classList.add("reveal"));
