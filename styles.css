@@ -492,25 +492,6 @@ section {
    margin: 0;
 }
 
-.project-links {
-   display: flex;
-   gap: 1rem;
-   flex-wrap: wrap;
-   margin-top: 1rem;
-}
-
-.project-links a {
-   color: #38a169;
-   font-weight: 600;
-   font-size: 0.95rem;
-   text-decoration: none;
-}
-
-.project-links a:hover {
-   color: #2f855a;
-   text-decoration: underline;
-}
-
 /* Skills Section */
 .skills-grid {
    display: grid;
