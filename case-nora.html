@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nora AI assistant case study by Chandrakanth Gubbala.">
+    <meta name="theme-color" content="#071018">
+    <title>Nora AI Assistant | Chandrakanth Gubbala</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Primary navigation">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">CG</span>
+                <span class="brand-text">Chandrakanth Gubbala</span>
+            </a>
+            <div class="nav-links case-nav">
+                <a href="index.html#work">Work</a>
+                <a href="assets/documents/Chandrakanth-Gubbala-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="case-hero section-band">
+            <div class="container case-hero-grid">
+                <div>
+                    <a class="back-link" href="index.html#work">
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                        Back to work
+                    </a>
+                    <p class="eyebrow">AI workflow design</p>
+                    <h1>Nora AI Assistant</h1>
+                    <p class="hero-lede">
+                        A source-grounded assistant concept designed around retrieval, validation, refusal logic, and escalation so users get useful answers without false confidence.
+                    </p>
+                </div>
+                <img class="case-preview" src="assets/images/nora-preview.png" alt="Nora AI assistant preview">
+            </div>
+        </section>
+
+        <section class="section-band">
+            <div class="container metric-grid">
+                <article>
+                    <span class="metric">RAG</span>
+                    <p>Assistant behavior shaped around retrieved sources and evidence checks.</p>
+                </article>
+                <article>
+                    <span class="metric">Guardrails</span>
+                    <p>Refusal and missing-data paths included as product behavior, not afterthoughts.</p>
+                </article>
+                <article>
+                    <span class="metric">Review</span>
+                    <p>Human review routing for ambiguous, sensitive, or insufficiently supported outputs.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-band case-body">
+            <div class="container detail-grid">
+                <aside class="case-sidebar">
+                    <h2>Role</h2>
+                    <p>Assistant journey design, information architecture, risk framing, and product requirements.</p>
+                    <h2>Focus</h2>
+                    <p>Retrieval, validation, refusal logic, escalation, trust, and stakeholder-ready AI product design.</p>
+                </aside>
+                <div class="case-content">
+                    <article>
+                        <p class="eyebrow">Challenge</p>
+                        <h2>Useful AI assistants need trust architecture, not just prompts.</h2>
+                        <p>
+                            The design goal was to move beyond a chatbot that sounds confident. Nora needed to show how an assistant could identify evidence, know its boundaries, and route uncertain cases in a way that protects the user experience.
+                        </p>
+                    </article>
+                    <article>
+                        <p class="eyebrow">Approach</p>
+                        <h2>Treat trust as a product requirement.</h2>
+                        <p>
+                            I structured the assistant around a retrieval-first flow, validation checkpoints, refusal behavior, and human review. The system design separates what the assistant knows, what it can infer, and what must be escalated or declined.
+                        </p>
+                        <ul class="case-list">
+                            <li>Defined a source-grounded response pattern so answers can be traced to evidence.</li>
+                            <li>Designed validation gates before final response generation.</li>
+                            <li>Added refusal and clarification paths for unsupported or ambiguous requests.</li>
+                            <li>Framed escalation as part of the workflow for higher-risk or low-confidence tasks.</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <p class="eyebrow">Why it matters</p>
+                        <h2>The case shows how I think about AI as an operational system.</h2>
+                        <p>
+                            Nora helps position the portfolio for AI product and program roles. It shows that I can design assistants with user value, governance, and implementation constraints in the same conversation.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <p>&copy; 2026 Chandrakanth Gubbala.</p>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
