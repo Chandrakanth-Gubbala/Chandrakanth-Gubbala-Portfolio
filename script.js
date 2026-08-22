@@ -1,6 +1,12 @@
 (() => {
     "use strict";
 
+    const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function motionIsReduced() {
+        return motionPreference.matches;
+    }
+
     function initNavigation() {
         const toggle = document.querySelector(".menu-toggle");
         const links = document.querySelector(".nav-links");
@@ -177,11 +183,96 @@
             if (!active) return;
 
             links.forEach((link) => {
-                link.classList.toggle("is-active", link.getAttribute("href") === `#${active.target.id}`);
+                const isActive = link.getAttribute("href") === `#${active.target.id}`;
+                link.classList.toggle("is-active", isActive);
+                if (isActive) {
+                    link.setAttribute("aria-current", "location");
+                } else {
+                    link.removeAttribute("aria-current");
+                }
             });
         }, { rootMargin: "-20% 0px -65%", threshold: [0, 0.25, 0.6] });
 
         sections.forEach((section) => observer.observe(section));
+    }
+
+    function initHeroSequence() {
+        const hero = document.querySelector(".hero");
+        if (!hero) return;
+
+        if (motionIsReduced()) {
+            hero.classList.add("is-motion-ready");
+            return;
+        }
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => hero.classList.add("is-motion-ready"));
+        });
+    }
+
+    function initMotionReveals() {
+        const selectors = [
+            ".reveal",
+            ".proof-item",
+            ".gallery figure",
+            ".experience-entry",
+            ".skill-column",
+            ".case-facts li",
+            ".case-body section"
+        ];
+        const items = Array.from(new Set(document.querySelectorAll(selectors.join(", "))));
+        if (!items.length) return;
+
+        items.forEach((item, index) => {
+            item.dataset.motionItem = "";
+            item.style.setProperty("--motion-delay", `${Math.min((index % 4) * 70, 210)}ms`);
+        });
+
+        if (motionIsReduced() || !("IntersectionObserver" in window)) {
+            items.forEach((item) => item.classList.add("is-visible"));
+            return;
+        }
+
+        document.documentElement.classList.add("motion-ready");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            });
+        }, { rootMargin: "0px 0px -9%", threshold: 0.1 });
+
+        items.forEach((item) => observer.observe(item));
+    }
+
+    function initHeroPointerMotion() {
+        const hero = document.querySelector(".home-page .hero");
+        const media = hero?.querySelector(".hero-media");
+        const desktopPointer = window.matchMedia("(min-width: 901px) and (hover: hover) and (pointer: fine)");
+        if (!hero || !media || motionIsReduced() || !desktopPointer.matches) return;
+
+        let frame = null;
+        let nextX = 0;
+        let nextY = 0;
+
+        const render = () => {
+            media.style.setProperty("--hero-x", `${nextX.toFixed(2)}px`);
+            media.style.setProperty("--hero-y", `${nextY.toFixed(2)}px`);
+            frame = null;
+        };
+
+        hero.addEventListener("pointermove", (event) => {
+            const bounds = hero.getBoundingClientRect();
+            nextX = ((event.clientX - bounds.left) / bounds.width - 0.5) * 10;
+            nextY = ((event.clientY - bounds.top) / bounds.height - 0.5) * 8;
+            if (!frame) frame = requestAnimationFrame(render);
+        });
+
+        hero.addEventListener("pointerleave", () => {
+            nextX = 0;
+            nextY = 0;
+            if (!frame) frame = requestAnimationFrame(render);
+        });
     }
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -190,5 +281,8 @@
         initFilters();
         initLightbox();
         initCaseNavigation();
+        initHeroSequence();
+        initMotionReveals();
+        initHeroPointerMotion();
     });
 })();
