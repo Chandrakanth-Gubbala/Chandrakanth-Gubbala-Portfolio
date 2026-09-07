@@ -240,7 +240,7 @@
                 entry.target.classList.add("is-visible");
                 observer.unobserve(entry.target);
             });
-        }, { rootMargin: "0px 0px -9%", threshold: 0.1 });
+        }, { rootMargin: "0px 0px 40px", threshold: 0 });
 
         items.forEach((item) => observer.observe(item));
     }
