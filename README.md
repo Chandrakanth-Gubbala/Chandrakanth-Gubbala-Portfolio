@@ -1,8 +1,8 @@
-# Chandrakanth Gubbala | Strategy, Programs & Decision Systems
+# Chandrakanth Gubbala | Program Management
 
 This repository powers my personal portfolio: [chandrakanth-gubbala.github.io/Chandrakanth-Gubbala-Portfolio/](https://chandrakanth-gubbala.github.io/Chandrakanth-Gubbala-Portfolio/).
 
-I am a strategy and program operator with unusual technical depth. My background combines seven years leading technically complex programs at the Indian Space Research Organisation with an MBA in Strategy and Technology from the University of Rochester's Simon Business School.
+I am a Houston-based Program Manager with 7+ years across climate technology, space, and energy. My background combines nearly seven years at the Indian Space Research Organisation with a STEM MBA in Strategy and Technology from the University of Rochester's Simon Business School, completed in May 2026. My independent projects include RisQ, an AI weather-risk prototype for last-mile delivery teams.
 
 The portfolio shows how I turn complex systems into decisions teams can act on when evidence is incomplete, stakeholders are fragmented, and execution matters. The hierarchy is capability first, project and outcome second, and technical or domain depth as inspectable proof.
 
@@ -10,10 +10,10 @@ My operating method is consistent across domains: frame the decision, interrogat
 
 ## Featured Work
 
-- **RisQ Weather Intelligence:** an inspectable product demonstrating data integration, decision UX, uncertainty handling, and hands-on implementation.
+- **RisQ Weather Intelligence:** an AI weather-risk prototype for last-mile delivery teams across 55+ U.S. cities, combining public forecasts, alerts, and an LLM advisor.
 - **GreenPack Energy Retrofit:** a five-year operating and financial decision model spanning 80+ categories and partner prioritization.
 - **25-Station GNSS Network:** a $1M program demonstrating distributed delivery, vendor management, governance, and reliability redesign.
-- **Nora AI Assistant:** an AI-governance workflow built around evidence sufficiency, provenance, refusal, escalation, and human review.
+- **NORA AI Assistant:** an AI-governance workflow built around evidence sufficiency, provenance, refusal, escalation, and human review.
 - **ISRO Storm Nowcasting:** model evaluation and cross-functional adoption translated into high-stakes operational decision support.
 - **HELOC Risk Assessment:** explainable machine learning translated into a review-oriented interface.
 - **Workforce Learning & Talent Analytics:** training evaluation, PCA and K-means segmentation, and validation-first promotion modeling rebuilt with synthetic public data.
@@ -24,10 +24,10 @@ My operating method is consistent across domains: frame the decision, interrogat
 ## Site Architecture
 
 - `index.html` presents the positioning, flagship evidence, featured projects, experience, and contact paths.
-- `work.html` contains 12 top-level projects with accessible capability filters: Strategy & Decisions, Programs & Operations, Data & Analytics, Products & AI, and Science & Research.
+- `work.html` contains 13 top-level projects with accessible capability filters: Strategy & Decisions, Programs & Operations, Data & Analytics, Products & AI, and Science & Research.
 - `experience.html` provides the professional and educational timeline.
 - `about.html` tells the story from IIST and ISRO through Simon and the present.
-- `case-studies/` contains seven detailed project narratives with a 30-second decision summary followed by roles, constraints, evidence, methods, outcomes, and reflections.
+- `case-studies/` contains eight detailed project narratives with a 30-second decision summary followed by roles, constraints, evidence, methods, outcomes, and reflections.
 - `assets/` stores self-hosted fonts, documents, optimized images, and click-to-load demo videos.
 
 The site is static HTML, CSS, and JavaScript with no framework or runtime dependency. It is designed for GitHub Pages and uses explicit `.html` routes.
